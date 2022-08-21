@@ -1,7 +1,7 @@
 import React from 'react'
 import pic2 from '../images/aasPic.png'
 import pic3  from '../images/tannuPic.png'
-import pic4 from '../images/team.png'
+import pic4 from '../images/contactUs.png'
 
 export default function () {
   return (
