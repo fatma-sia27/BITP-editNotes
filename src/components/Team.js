@@ -159,7 +159,7 @@ export default function () {
               </div>
             </div>
         </div>
-        <div className="col-3 my-2 py-5 my-5 ml-auto"><img src={pic3} alt="loading..." style={{width:"400px", height:"450px"}}/></div>
+        <div className="col-3 my-2 py-5 my-5 ml-auto"><img src={pic4} alt="loading..." style={{width:"400px", height:"450px"}}/></div>
       </div>
    </>
   )
