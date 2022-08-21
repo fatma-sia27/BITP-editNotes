@@ -54,7 +54,7 @@ export default function () {
                 src={pic3}
                 className="card-img-top"
                 alt="..."
-                style={{ width: "285px", height: "250px" }}
+                style={{ width: "350px", height: "250px" }}
               />
               <div className="card-body" style={{ backgroundColor: "#2f4f4f" }}>
                 <h4

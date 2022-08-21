@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="col-1"><img src={pic} alt="" style={{width: "50px"}}/></div> 
       <div className="col-2 px-0 p-0">BITP editNotes</div>
         <div className="wrap py-0" style={{display: "flex", alignItems: "end", justifyContent: "end"}}>
-        <button className="button">Log In</button>
+        <button className="button" >Log In</button>
   <button className="button" >SignUp</button>
 </div>
 </div>
