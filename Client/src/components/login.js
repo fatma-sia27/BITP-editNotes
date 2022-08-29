@@ -1,0 +1,117 @@
+import React ,  {useState} from 'react'
+import { NavLink , useNavigate } from 'react-router-dom'
+import pic2 from '../images/google.png'
+import pic3 from '../images/linkedin.png'
+import pic4 from '../images/github.png'
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
+export default function login() {
+    const myStyle = {
+        width: "50px",  
+      }
+      const navigate = useNavigate()
+      const [uname , setuname] = useState('')
+      const [pwd , setpwd] = useState('')
+    const loginUser = async(e) =>{
+        e.preventDefault()
+    const res = await	fetch('/login' , {
+      method : "POST" ,
+        headers: {
+            "Content-Type" : "application/json"
+        }, 
+        body : JSON.stringify({
+            
+          uname , pwd    
+            
+            
+        })
+    
+    })
+    const data = await res.json()
+    if(res.status===400 || !data){
+        window.alert("invalid login")
+        console.log("invalid login")
+     } else{
+        window.alert("valid login")
+        console.log("valid login")
+        navigate("/logindashboard")
+     }
+    }
+  return (
+    <>
+   {/* form Login */}
+
+
+<div className="body">
+<h5 className="card-title shadow-lg p-3 mb-5 bg-body rounded">
+          BIT'P editNotes
+    </h5>
+<div id="Form">
+<div className="center px-2 py-2" style={{ top: "30px", justifyContent:"center", alignItems:"center", display:"flex", textAlign:"center"}}>
+            <div className="card border border-success bg secondary" style={{backgroundColor: "#c0c0c0"}}>
+              <div className="card-body">
+                <h5 className="card-title shadow-lg p-3 mb-5 bg-body rounded">
+                  Login Here...
+                </h5>
+                <p className="card-text">
+                <form
+                 method='POST'
+                    className="row g-3 py-4"
+                  >
+                    <div className="col-md-12">
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="inputUserName4"
+
+                        name = "uname"
+                        value={uname}
+                        onChange = {(e) => setuname(e.target.value)}
+                        placeholder="Your User Name"
+                      />
+                    </div>
+                    <div className="col-md-12">
+                      <input
+                        type="Password"
+                        className="form-control"
+                        id="inputPassword4"
+
+
+                        name = "pwd"
+                      value={pwd}
+                      onChange = {(e) => setpwd(e.target.value)}
+                        placeholder="Your Password"
+                      />
+                    </div>
+                    <div className="col-12">
+                      <span>Or</span>
+                      <Link to="/googleLogin">
+                      <button className='btn btn-outline-link' ><img className="px-2" src={pic2} alt="" style={myStyle}/></button>
+                      </Link>
+                      <button className='btn btn-outline-link'><img className="px-2" src={pic3} alt="" style={myStyle}/></button>
+                      <button className='btn btn-outline-link'><img className="px-2" src={pic4} alt="" style={myStyle}/></button>
+                    </div>
+                    <div className="col-12">
+                   
+                      <button
+                        type="button"
+                        class="buttonCss"
+                        id="buttonCss"
+                        onClick={loginUser}
+
+                      >
+                       Login
+                      </button>
+                     
+      
+                    </div>
+                  </form>
+                </p>
+              </div>
+            </div>
+            </div>
+</div>
+</div>
+    </>
+  )
+}
