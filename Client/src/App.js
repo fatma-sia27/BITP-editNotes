@@ -7,9 +7,12 @@ import Team from './components/Team';
 import LoginDashboard from './components/logindashboard';
 import Opportunities from './components/Opportunities';
 import SecYearCSE from './components/secYrCSE'
+import SecYearECE from './components/secYrECE'
 import FirstYrCSE from './components/firstYrCSE'
 import FirstYrECE from './components/firstYrECE'
 import ThirdYrCSE from './components/thirdYrCSE'
+import ThirdYrECE from './components/thirdYrECE'
+import ContactUs from './components/contact'
 import {BrowserRouter, Switch, Route, Link, Routes} from "react-router-dom"
 
 import {gapi} from 'gapi-script'
@@ -47,6 +50,9 @@ function App() {
       <Route path="/secYearCSE" element={<SecYearCSE/>} />
       <Route path="/thirdYearCSE" element={<ThirdYrCSE/>} />
       <Route path="/firstYearECE" element={<FirstYrECE/>} />
+      <Route path="/secYearECE" element={<SecYearECE/>} />
+      <Route path="/thirdYearECE" element={<ThirdYrECE/>} />
+      <Route path="/contact" element={<ContactUs/>} />
     </Routes>
     </BrowserRouter>
     </>

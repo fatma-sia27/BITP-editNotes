@@ -44,13 +44,31 @@ const signup = ()=> {
         
     }
   }
+  let mySt={
+    background: 'rgb(34,193,195)',
+    background: "linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%)",
+    fontFamily: "work sans"
+  }
+  let mySt1={
+    borderRadius: "24px",
+    width: "80%",
+    height: "40px",
+    fontSize: "1.3rem",
+    color: "white",
+    fontWeight: "700px",
+    background: "rgb(34,193,195)",
+    background: "linear-gradient(90deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%)",
+    border: "0px",
+    cursor: "pointer",
+    transition: "opacity 0.25s ease-out"
+  }
 
 
 
   return (
     <>
    
-   <div className="body">
+   <div className="body" style={mySt}>
    <h5 className="card-title shadow-lg p-3 mb-5 bg-body rounded">
           BIT'P editNotes
     </h5>
@@ -138,7 +156,7 @@ const signup = ()=> {
                     <div className="col-12">
                       <button
                         type="button"
-                        
+                        style={mySt1}
                        onClick={PostData}
                         class="btn btn-outline-success btn-lg"
                         id="buttonCss"
